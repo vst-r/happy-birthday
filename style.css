@@ -230,6 +230,8 @@ body {
     opacity: 0.6;
     filter: blur(1px);
     transform-style: preserve-3d;
+    will-change: transform, opacity;
+    /* GPU acceleration */
 }
 
 .floating-star {
@@ -399,9 +401,10 @@ body {
 }
 
 .message-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.08);
+    /* Slightly more visible without blur */
+    /* backdrop-filter removed for performance */
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 20px;
     padding: var(--space-md) var(--space-lg);
     max-width: 90%;
@@ -409,6 +412,8 @@ body {
     opacity: 0;
     transform: translateY(30px);
     animation: revealCard 0.6s var(--ease-bounce) forwards;
+    will-change: transform, opacity;
+    /* GPU acceleration */
 }
 
 .message-card[data-order="1"] {
@@ -578,8 +583,9 @@ body {
 }
 
 .final-card {
-    background: linear-gradient(135deg, rgba(255, 107, 157, 0.15), rgba(192, 132, 252, 0.15));
-    backdrop-filter: blur(20px);
+    background: linear-gradient(135deg, rgba(255, 107, 157, 0.2), rgba(192, 132, 252, 0.2));
+    /* Slightly more visible */
+    /* backdrop-filter removed for performance */
     border: 2px solid var(--color-primary);
     border-radius: 30px;
     padding: var(--space-lg) var(--space-md);
@@ -588,6 +594,8 @@ body {
     width: 100%;
     animation: cardFloat 4s ease-in-out infinite;
     overflow: hidden;
+    will-change: transform;
+    /* GPU acceleration */
 }
 
 @keyframes cardFloat {

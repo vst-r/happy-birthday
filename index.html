@@ -25,17 +25,11 @@
         <source src="Montagem%20Miau.mp3" type="audio/mpeg">
     </audio>
 
-    <!-- Floating Background Elements -->
+    <!-- Floating Background Elements (Reduced for performance) -->
     <div class="floating-elements" aria-hidden="true">
-        <div class="floating-heart" style="--delay: 0s; --x: 10%;">💖</div>
-        <div class="floating-heart" style="--delay: 1s; --x: 25%;">✨</div>
-        <div class="floating-heart" style="--delay: 2s; --x: 40%;">💝</div>
-        <div class="floating-heart" style="--delay: 0.5s; --x: 55%;">🌟</div>
-        <div class="floating-heart" style="--delay: 1.5s; --x: 70%;">💗</div>
-        <div class="floating-heart" style="--delay: 2.5s; --x: 85%;">⭐</div>
-        <div class="floating-star" style="--delay: 0.3s; --x: 15%;">🎀</div>
-        <div class="floating-star" style="--delay: 1.3s; --x: 60%;">🎈</div>
-        <div class="floating-star" style="--delay: 2.3s; --x: 90%;">🎁</div>
+        <div class="floating-heart" style="--delay: 0s; --x: 20%;">💖</div>
+        <div class="floating-heart" style="--delay: 1.5s; --x: 50%;">✨</div>
+        <div class="floating-heart" style="--delay: 3s; --x: 80%;">💝</div>
     </div>
 
     <!-- Main Content -->
@@ -45,7 +39,7 @@
         <section class="section hero-section" id="hero">
             <div class="cake-wrapper" id="cakeWrapper">
                 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHd6OHNqdm5hZzF5OWprNnVnNWp1MW5qOHB2Y2pxM2g3bmtreTdnciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WRL7YgP42OKns22wRD/giphy.gif"
-                    alt="Birthday Cake Animation" class="cake-gif">
+                    alt="Birthday Cake Animation" class="cake-gif" loading="eager">
                 <p class="tap-hint">👆 แตะเค้าสิ!</p>
             </div>
 
@@ -68,7 +62,7 @@
 
             <div class="message-card reveal" data-order="2">
                 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXI2MXV6bHRpbHNtaTVmajB6OXlrMnQ2czdqeHB6dHNsNDhtdXd2aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT5LMHxhOfscxPfIfm/giphy.gif"
-                    alt="Thinking face" class="reaction-gif">
+                    alt="Thinking face" class="reaction-gif" loading="lazy">
             </div>
 
             <div class="message-card reveal special" data-order="3">
@@ -79,7 +73,7 @@
 
             <div class="message-card reveal" data-order="4">
                 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjRhaWxsaHF2Nm52cXJjeWpqem1pbHRtYnZuamdzZHc2ZW80MDdvNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MDJ9IbxxvDUQM/giphy.gif"
-                    alt="Heart eyes" class="reaction-gif">
+                    alt="Heart eyes" class="reaction-gif" loading="lazy">
             </div>
 
             <button class="scroll-btn continue-btn" id="continueBtn">
@@ -93,13 +87,13 @@
 
             <div class="candle-wrapper" id="candleWrapper">
                 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTQxdWM0cXBidmN0cG9wNmR0M3Jvd2V2bnIzam9uNDR3a2dobXMycSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Xw3gU8t70yv3W/giphy.gif"
-                    alt="Birthday Candles" class="candle-gif" id="candleGif">
+                    alt="Birthday Candles" class="candle-gif" id="candleGif" loading="lazy">
                 <p class="wish-hint">👆 แตะเพื่อเป่าเทียนแล้วอธิษฐาน!</p>
             </div>
 
             <div class="wish-made hidden" id="wishMade">
                 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXJmNjFlcGtsMHEyZ3VvMzM4aXk5Z2gxdW04ZjFmOHBxOGk0MGl5eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/g9582DNuQppxC/giphy.gif"
-                    alt="Celebration" class="celebration-gif">
+                    alt="Celebration" class="celebration-gif" loading="lazy">
                 <p class="wish-text">🌟 ขอให้สิ่งที่อธิษฐานเป็นจริง! 🌟</p>
                 <button class="scroll-btn final-btn" id="finalBtn">
                     ยังมีอีกนะคะ
@@ -111,7 +105,7 @@
         <section class="section final-section hidden" id="final">
             <div class="final-card">
                 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHN2M3BtaHllZmgxcm8zbmN3cXlkaGpiaXd4eWh5NnI3NW1sbmd0eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26FPpSuhgHvYo9Kyk/giphy.gif"
-                    alt="Love" class="love-gif">
+                    alt="Love" class="love-gif" loading="lazy">
 
                 <div class="final-message">
                     <p class="final-text">ขอให้วันเกิดปีนี้</p>

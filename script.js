@@ -50,7 +50,7 @@ function startMusic() {
  */
 function fireConfetti(options = {}) {
     const defaults = {
-        particleCount: 100,
+        particleCount: 50,  // Reduced for mobile performance
         spread: 70,
         origin: { y: 0.6 },
         colors: ['#ff6b9d', '#c084fc', '#fbbf24', '#fff', '#ff85c0']
@@ -65,7 +65,7 @@ function fireConfetti(options = {}) {
 function fireSideConfetti() {
     // Left side
     confetti({
-        particleCount: 50,
+        particleCount: 25,  // Reduced for mobile
         angle: 60,
         spread: 55,
         origin: { x: 0 },
@@ -74,7 +74,7 @@ function fireSideConfetti() {
 
     // Right side
     confetti({
-        particleCount: 50,
+        particleCount: 25,  // Reduced for mobile
         angle: 120,
         spread: 55,
         origin: { x: 1 },
@@ -86,17 +86,17 @@ function fireSideConfetti() {
  * Fire celebration confetti sequence
  */
 function fireCelebration() {
-    // Initial burst
-    fireConfetti({ particleCount: 150, spread: 100 });
+    // Initial burst (reduced for mobile)
+    fireConfetti({ particleCount: 80, spread: 100 });
 
     // Side bursts
     setTimeout(() => fireSideConfetti(), 300);
     setTimeout(() => fireSideConfetti(), 600);
 
-    // Finale
+    // Finale (reduced for mobile)
     setTimeout(() => {
         fireConfetti({
-            particleCount: 200,
+            particleCount: 100,
             spread: 160,
             startVelocity: 45,
             decay: 0.9
