@@ -312,11 +312,12 @@ body {
 }
 
 .cake-gif {
-    width: min(500px, 90vw);
+    width: min(280px, 70vw);
+    /* Reduced for performance */
     max-width: 100%;
     height: auto;
-    border-radius: 28px;
-    filter: drop-shadow(0 0 50px var(--color-glow-pink));
+    border-radius: 20px;
+    /* Heavy filter removed for mobile performance */
 }
 
 .tap-hint {
@@ -487,14 +488,15 @@ body {
 .message-text.glow {
     font-size: clamp(1.5rem, 6vw, 2rem);
     font-weight: 700;
-    animation: neonPulse 2s ease-in-out infinite alternate;
+    /* Animation removed for mobile performance */
 }
 
 .reaction-gif {
-    width: min(400px, 90vw);
+    width: min(200px, 60vw);
+    /* Reduced for performance */
     max-width: 100%;
     height: auto;
-    border-radius: 24px;
+    border-radius: 16px;
 }
 
 .continue-btn {
@@ -539,10 +541,11 @@ body {
 }
 
 .candle-gif {
-    width: min(500px, 90vw);
+    width: min(250px, 65vw);
+    /* Reduced for performance */
     height: auto;
-    border-radius: 28px;
-    filter: drop-shadow(0 0 50px rgba(251, 191, 36, 0.5));
+    border-radius: 20px;
+    /* Heavy filter removed for mobile performance */
     transition: all var(--duration-slow) ease;
 }
 
@@ -577,10 +580,11 @@ body {
 }
 
 .celebration-gif {
-    width: min(450px, 90vw);
+    width: min(220px, 60vw);
+    /* Reduced for performance */
     max-width: 100%;
     height: auto;
-    border-radius: 24px;
+    border-radius: 16px;
     margin-bottom: var(--space-md);
 }
 
@@ -628,10 +632,11 @@ body {
 }
 
 .love-gif {
-    width: min(350px, 80vw);
+    width: min(200px, 55vw);
+    /* Reduced for performance */
     max-width: 100%;
     height: auto;
-    border-radius: 24px;
+    border-radius: 16px;
     margin-bottom: var(--space-md);
 }
 
