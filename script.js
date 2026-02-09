@@ -127,7 +127,7 @@ const trollMessages = [
 ];
 
 let trollClickCount = 0;
-const TROLL_MAX = 30;
+const TROLL_MAX = 29;
 
 // Start button - TROLL MODE! 😈
 startBtn.addEventListener('click', (e) => {
