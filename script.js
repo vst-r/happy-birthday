@@ -169,8 +169,8 @@ continueBtn.addEventListener('click', () => {
     navigateToSection(wishSection);
 });
 
-// Candle blow
-candleWrapper.addEventListener('click', () => {
+// Candle blow - handle function
+function handleCandleBlow() {
     if (candlesBlown) return;
 
     candlesBlown = true;
@@ -181,6 +181,13 @@ candleWrapper.addEventListener('click', () => {
         candleWrapper.style.display = 'none';
         wishMade.classList.remove('hidden');
     }, 500);
+}
+
+// Support both click and touch for iOS Safari
+candleWrapper.addEventListener('click', handleCandleBlow);
+candleWrapper.addEventListener('touchend', (e) => {
+    e.preventDefault();  // Prevent double-firing
+    handleCandleBlow();
 });
 
 // Final button
