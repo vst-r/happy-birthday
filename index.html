@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>🎂 Happy Birthday! 🎉</title>
+
+    <!-- Google Fonts: Fredoka + Nunito -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Background Music (Hidden - No escape! 😈) -->
+    <audio id="bgMusic" loop preload="auto">
+        <source src="Montagem%20Miau.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Floating Background Elements -->
+    <div class="floating-elements" aria-hidden="true">
+        <div class="floating-heart" style="--delay: 0s; --x: 10%;">💖</div>
+        <div class="floating-heart" style="--delay: 1s; --x: 25%;">✨</div>
+        <div class="floating-heart" style="--delay: 2s; --x: 40%;">💝</div>
+        <div class="floating-heart" style="--delay: 0.5s; --x: 55%;">🌟</div>
+        <div class="floating-heart" style="--delay: 1.5s; --x: 70%;">💗</div>
+        <div class="floating-heart" style="--delay: 2.5s; --x: 85%;">⭐</div>
+        <div class="floating-star" style="--delay: 0.3s; --x: 15%;">🎀</div>
+        <div class="floating-star" style="--delay: 1.3s; --x: 60%;">🎈</div>
+        <div class="floating-star" style="--delay: 2.3s; --x: 90%;">🎁</div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Section 1: Hero -->
+        <section class="section hero-section" id="hero">
+            <div class="cake-wrapper" id="cakeWrapper">
+                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHd6OHNqdm5hZzF5OWprNnVnNWp1MW5qOHB2Y2pxM2g3bmtreTdnciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WRL7YgP42OKns22wRD/giphy.gif"
+                    alt="Birthday Cake Animation" class="cake-gif">
+                <p class="tap-hint">👆 แตะเค้าสิ!</p>
+            </div>
+
+            <h1 class="neon-title">
+                <span class="title-line">Happy</span>
+                <span class="title-line">Birthday!</span>
+            </h1>
+
+            <button class="scroll-btn" id="startBtn">
+                Let's goooooooooooo 🎉
+            </button>
+        </section>
+
+        <!-- Section 2: Teasing Messages -->
+        <section class="section message-section hidden" id="messages">
+            <div class="message-card reveal" data-order="1">
+                <p class="message-text teasing">รู้ไหม...</p>
+                <p class="message-text teasing">วันนี้เด็กเปรี้ยวแก่ขึ้นอีก 1 ปีแล้วนะ 👀</p>
+            </div>
+
+            <div class="message-card reveal" data-order="2">
+                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXI2MXV6bHRpbHNtaTVmajB6OXlrMnQ2czdqeHB6dHNsNDhtdXd2aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT5LMHxhOfscxPfIfm/giphy.gif"
+                    alt="Thinking face" class="reaction-gif">
+            </div>
+
+            <div class="message-card reveal special" data-order="3">
+                <p class="message-text">แต่ไม่เป็นไรหรอก...</p>
+                <p class="message-text sweet">เพราะเด็กเปรี้ยวยังน่ารัก</p>
+                <p class="message-text sweet glow">เหมือนเดิม! 💖</p>
+            </div>
+
+            <div class="message-card reveal" data-order="4">
+                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjRhaWxsaHF2Nm52cXJjeWpqem1pbHRtYnZuamdzZHc2ZW80MDdvNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MDJ9IbxxvDUQM/giphy.gif"
+                    alt="Heart eyes" class="reaction-gif">
+            </div>
+
+            <button class="scroll-btn continue-btn" id="continueBtn">
+                ต่อไป~ 💕
+            </button>
+        </section>
+
+        <!-- Section 3: Interactive Wish -->
+        <section class="section wish-section hidden" id="wish">
+            <h2 class="section-title">เป่าเทียนสิ! 🎂</h2>
+
+            <div class="candle-wrapper" id="candleWrapper">
+                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTQxdWM0cXBidmN0cG9wNmR0M3Jvd2V2bnIzam9uNDR3a2dobXMycSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Xw3gU8t70yv3W/giphy.gif"
+                    alt="Birthday Candles" class="candle-gif" id="candleGif">
+                <p class="wish-hint">👆 แตะเพื่อเป่าเทียนแล้วอธิษฐาน!</p>
+            </div>
+
+            <div class="wish-made hidden" id="wishMade">
+                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXJmNjFlcGtsMHEyZ3VvMzM4aXk5Z2gxdW04ZjFmOHBxOGk0MGl5eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/g9582DNuQppxC/giphy.gif"
+                    alt="Celebration" class="celebration-gif">
+                <p class="wish-text">🌟 ขอให้สิ่งที่อธิษฐานเป็นจริง! 🌟</p>
+                <button class="scroll-btn final-btn" id="finalBtn">
+                    ยังมีอีกนะคะ
+                </button>
+            </div>
+        </section>
+
+        <!-- Section 4: Final Message -->
+        <section class="section final-section hidden" id="final">
+            <div class="final-card">
+                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHN2M3BtaHllZmgxcm8zbmN3cXlkaGpiaXd4eWh5NnI3NW1sbmd0eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26FPpSuhgHvYo9Kyk/giphy.gif"
+                    alt="Love" class="love-gif">
+
+                <div class="final-message">
+                    <p class="final-text">ขอให้วันเกิดปีนี้</p>
+                    <p class="final-text">เต็มไปด้วยความสุข</p>
+                    <p class="final-text">รอยยิ้ม และเสียงหัวเราะ</p>
+                    <p class="final-text highlight">สุขสันต์วันเกิดนะคะ! 🎂💖</p>
+                </div>
+
+                <div class="signature">
+                    <p>ด้วยรักและกวนตีน</p>
+                    <p class="date">12 กุมภาพันธ์ 2569</p>
+                </div>
+            </div>
+
+            <button class="restart-btn" id="restartBtn">
+                🔄 ดูใหม่อีกรอบ
+            </button>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
