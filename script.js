@@ -140,10 +140,10 @@ startBtn.addEventListener('click', (e) => {
         startBtn.style.left = '';
         startBtn.style.top = '';
         startBtn.textContent = 'ไปเลย! 🎉';
-        fireConfetti({ particleCount: 80, spread: 100 });  // Only confetti at the end!
+        // Confetti removed for performance
         setTimeout(() => {
             navigateToSection(messageSection);
-        }, 500);
+        }, 300);  // Reduced delay
         return;
     }
 
