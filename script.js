@@ -176,9 +176,8 @@ candleWrapper.addEventListener('click', () => {
     candlesBlown = true;
     candleGif.classList.add('blown');
 
-    // Fire celebration
+    // Show celebration (confetti removed for performance)
     setTimeout(() => {
-        fireCelebration();
         candleWrapper.style.display = 'none';
         wishMade.classList.remove('hidden');
     }, 500);
@@ -187,26 +186,12 @@ candleWrapper.addEventListener('click', () => {
 // Final button
 finalBtn.addEventListener('click', () => {
     navigateToSection(finalSection);
-
-    // Delayed celebration confetti
-    setTimeout(() => {
-        fireSideConfetti();
-    }, 500);
 });
 
 // Restart button
 restartBtn.addEventListener('click', resetAll);
 
-// Initial confetti on page load
-window.addEventListener('load', () => {
-    setTimeout(() => {
-        fireConfetti({
-            particleCount: 50,
-            spread: 60,
-            origin: { y: 0.3 }
-        });
-    }, 500);
-});
+// Confetti on page load removed for performance
 
 // Add touch feedback for mobile
 document.querySelectorAll('.scroll-btn, .restart-btn').forEach(btn => {
