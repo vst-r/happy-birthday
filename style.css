@@ -218,6 +218,15 @@ body {
     pointer-events: none;
     z-index: 0;
     overflow: hidden;
+    display: none;
+    /* Hidden on mobile for performance */
+}
+
+/* Only show floating elements on larger screens */
+@media (min-width: 768px) {
+    .floating-elements {
+        display: block;
+    }
 }
 
 .floating-heart,
@@ -349,8 +358,16 @@ body {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: none;
-    filter: drop-shadow(0 0 20px var(--color-glow-pink)) drop-shadow(0 0 40px var(--color-glow-purple));
-    animation: neonPulse 3s ease-in-out infinite alternate;
+    /* Simplified - static glow instead of animated for mobile performance */
+    filter: drop-shadow(0 0 15px var(--color-glow-pink));
+}
+
+/* Only animate on larger screens */
+@media (min-width: 768px) {
+    .title-line {
+        filter: drop-shadow(0 0 20px var(--color-glow-pink)) drop-shadow(0 0 40px var(--color-glow-purple));
+        animation: neonPulse 3s ease-in-out infinite alternate;
+    }
 }
 
 @keyframes neonPulse {
