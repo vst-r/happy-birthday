@@ -44,65 +44,7 @@ function startMusic() {
     }
 }
 
-/**
- * Trigger confetti explosion
- * @param {Object} options - confetti options
- */
-function fireConfetti(options = {}) {
-    const defaults = {
-        particleCount: 50,  // Reduced for mobile performance
-        spread: 70,
-        origin: { y: 0.6 },
-        colors: ['#ff6b9d', '#c084fc', '#fbbf24', '#fff', '#ff85c0']
-    };
-
-    confetti({ ...defaults, ...options });
-}
-
-/**
- * Fire confetti burst from both sides
- */
-function fireSideConfetti() {
-    // Left side
-    confetti({
-        particleCount: 25,  // Reduced for mobile
-        angle: 60,
-        spread: 55,
-        origin: { x: 0 },
-        colors: ['#ff6b9d', '#c084fc', '#fbbf24']
-    });
-
-    // Right side
-    confetti({
-        particleCount: 25,  // Reduced for mobile
-        angle: 120,
-        spread: 55,
-        origin: { x: 1 },
-        colors: ['#ff6b9d', '#c084fc', '#fbbf24']
-    });
-}
-
-/**
- * Fire celebration confetti sequence
- */
-function fireCelebration() {
-    // Initial burst (reduced for mobile)
-    fireConfetti({ particleCount: 80, spread: 100 });
-
-    // Side bursts
-    setTimeout(() => fireSideConfetti(), 300);
-    setTimeout(() => fireSideConfetti(), 600);
-
-    // Finale (reduced for mobile)
-    setTimeout(() => {
-        fireConfetti({
-            particleCount: 100,
-            spread: 160,
-            startVelocity: 45,
-            decay: 0.9
-        });
-    }, 900);
-}
+// Confetti removed for mobile performance 🚀
 
 /**
  * Navigate to a section
@@ -193,12 +135,12 @@ startBtn.addEventListener('click', (e) => {
     trollClickCount++;
 
     if (trollClickCount >= TROLL_MAX) {
-        // Finally let them through after 10 clicks
+        // Finally let them through after 30 clicks
         startBtn.style.position = '';
         startBtn.style.left = '';
         startBtn.style.top = '';
         startBtn.textContent = 'ไปเลย! 🎉';
-        fireConfetti({ particleCount: 150, spread: 100 });
+        fireConfetti({ particleCount: 80, spread: 100 });  // Only confetti at the end!
         setTimeout(() => {
             navigateToSection(messageSection);
         }, 500);
@@ -219,12 +161,7 @@ startBtn.addEventListener('click', (e) => {
     // Change text to teasing message
     startBtn.textContent = trollMessages[trollClickCount - 1];
 
-    // Small confetti on each click
-    fireConfetti({
-        particleCount: 20,
-        spread: 40,
-        origin: { x: (randomX + startBtn.offsetWidth / 2) / window.innerWidth, y: (randomY + startBtn.offsetHeight / 2) / window.innerHeight }
-    });
+    // No confetti on each click - removed for mobile performance! 🚀
 });
 
 // Continue button
